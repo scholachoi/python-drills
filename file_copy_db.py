@@ -18,8 +18,7 @@ create_table()
 def insert_data():
     c.execute('INSERT INTO filecheck(LastCopied) VALUES(?)', (datetime.datetime.now().replace(microsecond=0),))
     conn.commit()
-    c.close()
-    conn.close()
+    
 
 def last_filecheck():
     c.execute('SELECT LastCopied FROM filecheck ORDER BY LastCopied DESC LIMIT 1')
@@ -83,5 +82,6 @@ if __name__ == "__main__":
     app = FileApp(root)
     root.title("Copy New Files")
     root.mainloop()
-    
+    c.close()
+    conn.close()
     
