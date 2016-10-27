@@ -33,7 +33,10 @@ class FileApp:
         ttk.Label(root, text = "Last checked date/time: ").grid(row=1, column=0, sticky=W)
 
         self.lastcheck = StringVar()
-        self.lastcheck.set(last_filecheck())
+        try:
+            self.lastcheck.set(last_filecheck())
+        except:
+            self.lastcheck.set("No data in database")
         ttk.Label(root, textvariable = self.lastcheck).grid(row=1, column=2)
         
         
