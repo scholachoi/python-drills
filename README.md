@@ -1,5 +1,5 @@
-# python-drills
-Assignments for the Python course at the Tech Academy
+# python-projects
+
 
 * [Bubble Sort](https://github.com/scholachoi/python-drills/blob/master/bubbleSort.py): A bubble sort algorithm.
 
